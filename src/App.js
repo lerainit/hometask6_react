@@ -11,6 +11,7 @@ import{useDispatch} from 'react-redux'
 import { setProductsAC } from './store/products/actionCreator';
 import CheckoutForm from './componentns/form/form'
 import { setCart } from './store/addCards/actions';
+ import { setFav } from './store/addFavorites/actions';
 
 
 initLocalStorage()
@@ -28,7 +29,9 @@ const App = () => {
  if(!localStorage.getItem('addCards')){
 localStorage.setItem('addCards',JSON.stringify([]))}
 dispatch({type:setCart})
-    
+if(!localStorage.getItem('addFavorites')){
+  localStorage.setItem('addFavorites',JSON.stringify([]))}
+  dispatch({type:setFav})
   }, [])
 
 

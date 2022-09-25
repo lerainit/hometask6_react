@@ -3,6 +3,29 @@ import { openModal } from "../../store/modal/actions";
 import { openDeleteModal } from "../../store/modal/actions";
 import { closeModal } from "../../store/modal/actions";
 import { closeDeleteModal } from "../../store/modal/actions";
+import { render,screen,fireEvent } from "@testing-library/react";
+import Modal from './modal'
+import { Provider } from "react-redux";
+import store from '../../store/'
+
+const Component =() =>{
+    return (
+    <Provider store ={store}>
+        <Modal/>
+    </Provider>
+)}
+describe('Modal renders',()=>{
+
+test('should Modal match snapshot',()=>{
+const {asFragment } = render(<Component/>)
+expect(asFragment()).toMatchSnapshot()
+
+})
+
+})
+
+
+
 
 const initialState = {
     

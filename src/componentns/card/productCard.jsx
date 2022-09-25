@@ -24,7 +24,9 @@ return(
                 <li><span>Art:</span>{props.art}</li>
 
                 <svg onClick = {()=>{
-                    dispatch(addFavoritesAC({id:id,index:index,products:products}))
+                    localStorage.setItem('index',index)
+                    localStorage.setItem('id',id)
+                    dispatch(addFavoritesAC())
                 dispatch({type:'setProducts'})}} version="1.0" xmlns="http://www.w3.org/2000/svg"
  width="40.000000pt" height="26.000000pt" viewBox="0 0 1280.000000 1216.000000"
  preserveAspectRatio="xMidYMid meet">
