@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal renders should Modal match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="modal"
+  >
+    <div
+      class="outer_container"
+    />
+    <div
+      class="modal_main_container"
+    >
+      <button
+        class="close_btn"
+      >
+        X
+      </button>
+      <p>
+        Are  you sure you want to add this product to cart?
+      </p>
+      <button
+        class="modal_btn"
+      >
+        delete from Cart
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
