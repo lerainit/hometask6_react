@@ -4,6 +4,7 @@ exports[`Modal renders should Modal match snapshot 1`] = `
 <DocumentFragment>
   <div
     class="modal"
+    data-testid="modal"
   >
     <div
       class="outer_container"

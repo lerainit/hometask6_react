@@ -26,7 +26,7 @@ const Modal = () => {
   return (
 
 
-    <div className={styles.modal}>
+    <div data-testid = 'modal' className={styles.modal}>
       <div className={styles.outer_container} onClick={() => { dispatch(closeModalAC()) }}></div>
       <div className={styles.modal_main_container} >
 
