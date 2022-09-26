@@ -1,6 +1,6 @@
 
 import './App.scss';
-import React, { useEffect} from 'react'
+import React, { useEffect,createContext,useState} from 'react'
 import Modal from './componentns/modal/modal'
 import DeleteModal from './componentns/modal/deletemodal';
 import Navigation from './componentns/navigation/Navigation';
@@ -16,8 +16,11 @@ import { setCart } from './store/addCards/actions';
 
 initLocalStorage()
 
+ export const Context = createContext()
 
 const App = () => {
+
+  const[isTable,setIsTable] = useState(true)
   const dispatch = useDispatch()
   const modal = useSelector(store =>store.modal.value)
   const deleteModal = useSelector(store => store.modal.deleteModalvalue)
@@ -37,7 +40,7 @@ if(!localStorage.getItem('addFavorites')){
 
 return (
     <>
-  
+  <Context.Provider value ={{isTable,setIsTable}}>
    <div className='App'>
 
         <Navigation />
@@ -49,6 +52,7 @@ return (
        <Modal ></Modal >}
      { deleteModal &&
         <DeleteModal  ></DeleteModal >}
+        </Context.Provider>
     </>
   );
 }
