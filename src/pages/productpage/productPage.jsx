@@ -19,7 +19,7 @@ const ProductPage = () => {
                          <tbody>
                               {products.map(({ id, name, price, art, url, addFavorites }, index) => <Raw key={index} id={id} name={name} art={art} price={price} url={url} />)}
                          </tbody></table>
-                    <button onClick={() => { setIsTable(prev => !prev) }}>Return to Cards format</button>
+                    <button className='change_btn' onClick={() => { setIsTable(prev => !prev) }}>Return to Cards format</button>
                </>
           )
 
@@ -28,7 +28,7 @@ const ProductPage = () => {
 
           return (
                <>
-                    <button onClick={() => { setIsTable(prev => !prev) }}>Show table format</button>
+                    <button className='change_btn' onClick={() => { setIsTable(prev => !prev) }}>Show table format</button>
                     
                     {products.map(({ id, name, price, art, url, addFavorites }, index) => <Card key={index} id={id} name={name} price={price} art={art} url={url} fill={addFavorites === true ? '#FFFF00' : '#fff'} index={index} products={products} ></Card>)}
 
