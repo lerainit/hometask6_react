@@ -1,9 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Modal renders should Modal match snapshot 1`] = `
+exports[`DeleteModal renders should DeleteModal match snapshot 1`] = `
 <DocumentFragment>
   <div
     class="modal"
+    data-testid="closemodal"
   >
     <div
       class="outer_container"
@@ -17,7 +18,7 @@ exports[`Modal renders should Modal match snapshot 1`] = `
         X
       </button>
       <p>
-        Are  you sure you want to add this product to cart?
+        Are you sure you want to delete this item from Cart?
       </p>
       <button
         class="modal_btn"

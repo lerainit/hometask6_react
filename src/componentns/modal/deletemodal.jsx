@@ -23,13 +23,13 @@ const addCardsArr = useSelector(store =>store.Cart.value)
    return (
 
 
-      <div className={styles.modal}>
+      <div data-testid = 'closemodal' className={styles.modal} >
          <div className={styles.outer_container} onClick={() => { dispatch(closeDeleteModalAC()) }}></div>
          <div className={styles.modal_main_container} >
 
             <button className={styles.close_btn} onClick={() => { dispatch(closeDeleteModalAC()) }}>X</button>
 
-            <p>{modalText}</p>
+            <p>Are you sure you want to delete this item from Cart?</p>
             <button className={styles.modal_btn} onClick={() => {
               localStorage.setItem('index',index)
                dispatch(deleteCardAC())
