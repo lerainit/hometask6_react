@@ -20,7 +20,7 @@ initLocalStorage()
 
 const App = () => {
 
-  const[isTable,setIsTable] = useState(true)
+  const[isTable,setIsTable] = useState(false)
   const dispatch = useDispatch()
   const modal = useSelector(store =>store.modal.value)
   const deleteModal = useSelector(store => store.modal.deleteModalvalue)
