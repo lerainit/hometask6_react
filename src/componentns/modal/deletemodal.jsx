@@ -23,7 +23,7 @@ const addCardsArr = useSelector(store =>store.Cart.value)
    return (
 
 
-      <div data-testid = 'closemodal' className={styles.modal} >
+      <div data-testid = 'deletemodal' className={styles.modal} >
          <div className={styles.outer_container} onClick={() => { dispatch(closeDeleteModalAC()) }}></div>
          <div className={styles.modal_main_container} >
 

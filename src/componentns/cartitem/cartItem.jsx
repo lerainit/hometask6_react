@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { openDeleteModalAC } from '../../store/modal/actionCreators';
 import { modalTextAC } from '../../store/modalText/actionCreators';
 import PropTypes from 'prop-types'
+import Button from '../button/button';
 
 
 const CartItem = (props) => {
@@ -24,11 +25,11 @@ const CartItem = (props) => {
  
             </ul>
 
-<button className={styles.del_from_cart_btn} onClick={() => {
+<Button className={styles.del_from_cart_btn} handleClick={() => {
  dispatch(openDeleteModalAC())
  dispatch(modalTextAC('Do you want to add this product to cart'))
- dispatch({type:'SET_VALUE_INDEX',payload:index})
-                }}>X</button>
+ dispatch({type:'SET_VALUE_INDEX',payload:index}) }} text ={'X'}
+               ></Button>
 </div>
         </>
     )

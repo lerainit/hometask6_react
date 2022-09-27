@@ -5,6 +5,7 @@ import { openModalAC } from "../../store/modal/actionCreators";
 import { addFavoritesAC } from "../../store/addFavorites/actionCreator";
 import PropTypes from 'prop-types'
 import { modalTextAC } from "../../store/modalText/actionCreators";
+import Button from "../button/button";
 
 
 
@@ -49,10 +50,10 @@ fill={fill} stroke="none">
 1388 -620 1525 -56 138 -104 253 -108 258 -3 4 -278 -610 -610 -1365z"/>
 </g>
 </svg>
-                <button  className={styles.addCart_btn} onClick = {() =>{
+                <Button  className={styles.addCart_btn} handleClick = {() =>{
     dispatch(openModalAC())
      dispatch(modalTextAC('Do you want to add this product to cart'))
-     dispatch({type:'SET_VALUE_INDEX',payload:index})}}>Add cart</button> </ul>
+     dispatch({type:'SET_VALUE_INDEX',payload:index})}}  text={'Add cart'}></Button> </ul>
       </>
     )
   }       
