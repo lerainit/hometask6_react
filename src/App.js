@@ -9,7 +9,6 @@ import initLocalStorage from './initLocalStorage';
 import {useSelector} from 'react-redux'
 import{useDispatch} from 'react-redux'
 import { setProductsAC } from './store/products/actionCreator';
-import CheckoutForm from './componentns/form/form'
 import { setCart } from './store/addCards/actions';
  import { setFav } from './store/addFavorites/actions';
 
